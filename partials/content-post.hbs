@@ -1,0 +1,20 @@
+{{! The post content }}
+<li>
+<div class="{{post_class}}">
+<div class="padding-20">
+<hr class="round"/>
+<div class="text-center">{{content words="0"}}</div>
+<div class="title"><h1><a href="/{{slug}}" title="{{title}}">{{title}}</a></h1></div>
+<p>{{excerpt words="70"}}&hellip;</p>
+<hr/>
+<div class="row">
+<div class="small-6 large-6 medium-6 columns">
+<i class="fa fa-clock-o"></i> {{date published_at timeago="true"}}
+</div>
+<div class="small-6 large-6 medium-6 columns">
+<div class="readmore"><span><a href="/{{slug}}" title="{{title}}">READ MORE</a></span></div>
+</div>
+</div>
+</div>
+</div>
+</li>

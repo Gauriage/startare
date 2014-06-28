@@ -1,0 +1,62 @@
+<div class="content">
+<div class="row">
+<div class="small-12 columns">
+
+<article> 
+<div class="{{post_class}}">
+<div class="postcontent">
+<h1><span>{{title}}</span></h1>
+{{content}}
+</div>
+<div class="meta">
+<div class="row">
+<div class="small-8 large-8 medium-8 columns">
+<i class="fa fa-clock-o"></i> {{date published_at timeago="true"}}, <i class="fa fa-user"></i> by {{author.name}}{{#if tags}}, <i class="fa fa-tags"></i> on {{tags}}{{/if}}
+</div>
+<div class="small-4 large-4 medium-4 columns">
+{{! Share Buttons }} 
+  <div class="shareit">
+ <div class="social-likes social-likes_single" data-single-title="Share">
+  <div class="facebook" title="Share link on Facebook">Facebook</div>
+  <div class="twitter" data-via="{{@blog.title}}" data-related="{{encode title}}" title="Share link on Twitter">Twitter</div>
+  <div class="plusone" title="Share link on Google+">Google+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+
+
+
+{{#if author}}
+{{#if author.cover}}
+<div class="authorinfo" style="background-image: url({{author.cover}})">
+{{else}}
+<div class="author-wrap">
+{{/if}}
+<div class="row">
+<div class="small-12 columns">
+
+{{#if author.image}}
+<img src="{{author.image}}" alt="{{author.name}}" class="alignleft"/>
+{{/if}}
+
+ <h5><a href="mailto:{{author.email}}">{{author.name}}</a> {{#if author.website}}<span>- <a href="{{author.website}}" target="_blank">{{author.website}}</a></span>{{/if}}</h5>
+
+{{#if author.bio}}
+<p>{{author.bio}}</p>
+{{/if}}
+
+</div>
+</div>
+</div>
+{{/if}}
+
+{{> comments}}
+</div>
+
+</article>
+
+</div>
+</div>
+</div>

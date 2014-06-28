@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if IE 8]>               <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US"> <!--<![endif]-->
+<head>
+  {{! Document Settings }}  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  {{! Page Meta }}
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+
+  {{! Favicon }}
+  <link rel="shortcut icon" href="{{asset "images/icons/favicon.png"}}">
+  
+  {{! RSS }}
+  <link rel="alternate" type="application/rss+xml" title="{{@blog.title}} » Feed" href="/rss">
+
+  {{! Styles'n'Scripts }}
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{asset "css/normalize.css"}}">
+  <link rel="stylesheet" href="{{asset "css/grid.css"}}">
+  <link rel="stylesheet" href="{{asset "css/font-awesome.min.css"}}">
+  <link rel="stylesheet" href="{{asset "css/style.css"}}">
+  <link rel="stylesheet" href="{{asset "css/slicknav.css"}}">
+  <script type="text/javascript">
+    var _yoData = {
+      "username": "STARTARE",
+      "trigger": "starta.re publishes a new post"
+    };
+    var s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = "//yoapp.s3.amazonaws.com/js/yo-button.js";
+    (document.head || document.getElementsByTagName("head")[0]).appendChild(s);
+  </script>
+  <script src="{{asset "js/vendor/custom.modernizr.js"}}"></script>
+
+  {{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+
+{{! Header }}
+<div class="header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}}); background-position:top center; background-size:cover"{{/if}}>
+{{! Top Bar }}
+<div class="topbar">
+<div class="row multicol collapse">
+<div class="small-12 columns">
+  <div class="social">
+    <ul>
+      <li><a href="https://www.facebook.com/startarenews" title="facebook" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+      <li><a href="https://twitter.com/StartareNews" title="twitter" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+<div class="small-12 columns">
+    {{#if @blog.logo}}
+    <div class="logo"><h1><a href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"/></a></h1></div>
+    {{else}}
+    <div class="logotxt"><h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1></div>
+    {{/if}}
+    {{#if @blog.description}}  
+    <div class="motto">{{@blog.description}}</div> 
+    {{/if}}    
+</div>
+</div>
+
+</div>
+
+{{! Navigation Menu }}
+{{> navigation}}
+
+
+
+    {{{body}}}
+
+   <footer>
+   <div class="copyright">
+    <div class="row">
+    <div class="small-12 columns">
+      <p class="text-center">Copyright 2014 Startare.  All Rights Reserved.</p>
+    </div>
+    </div>
+    </div>
+  </footer>
+  <a href="#top" id="back-to-top"><img src="{{asset "images/icons/backtop.png"}}" alt="Back to top"></a>
+
+    {{ghost_foot}}
+
+    {{! The JavaScript files }}
+    {{! Superfish Menu }}
+    <script type="text/javascript" src="{{asset "/js/vendor/hoverIntent.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "/js/vendor/superfish.js"}}"></script>
+    {{! Menu for Small Screens }}
+    <script type="text/javascript" src="{{asset "/js/vendor/jquery.slicknav.min.js"}}"></script>
+    {{! Social Likes }}
+    <script type="text/javascript" src="{{asset "/js/vendor/social-likes.min.js"}}"></script>
+    {{! Isotope }}
+    <script type="text/javascript" src="{{asset "/js/vendor/isotope.pkgd.js"}}"></script>
+    <script type="text/javascript" src="{{asset "/js/vendor/imagesloaded.pkgd.min.js"}}"></script>
+    {{! Conditionizr}}
+    <script type="text/javascript" src="{{asset "/js/vendor/conditionizr.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "/js/vendor/safari.js"}}"></script>
+    <script type="text/javascript" src="{{asset "/js/vendor/windows.js"}}"></script>
+    {{! InfiniteScroll }}
+    <script type="text/javascript" src="{{asset "/js/vendor/jquery.infinitescroll.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "/js/vendor/manual-trigger.js"}}"></script>
+     {{! Scripts Hooks }}
+    <script type="text/javascript" src="{{asset "/js/custom-infscroll.js"}}"></script>
+</body>
+</html>

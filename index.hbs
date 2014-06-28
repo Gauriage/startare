@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{! The main content area on the homepage }}
+
+<div class="blogpagesection content">
+<div class="row multicol">
+<div class="small-12 columns">
+<div class="itemContainer">
+<ul class="large-block-grid-3 medium-block-grid-2 small-block-grid-1 blogitems guttermasonry">
+
+    {{#foreach posts}}
+      {{> content-post}}  
+    {{/foreach}}
+
+</ul>
+</div>
+
+      {{pagination}}  
+     
+</div>
+</div>
+</div>
